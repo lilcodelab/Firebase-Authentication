@@ -1,0 +1,25 @@
+<header>
+  <p-toolbar>
+    <div class="p-toolbar-group-left">My Firebase App</div>
+    <p-button
+      *ngIf="isLoggedIn$ | async"
+      class="mr-auto ml-4"
+      styleClass="p-button-sm p-button-danger"
+      [label]="'Delete account'"
+      (onClick)="deleteAccount()"
+    ></p-button>
+    <div class="mr-6">
+      {{ getEmail() }}
+    </div>
+    <p-button
+      *ngIf="isLoggedIn$ | async"
+      styleClass="p-button-sm"
+      [label]="'Log out'"
+      (onClick)="logout()"
+    ></p-button>
+  </p-toolbar>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

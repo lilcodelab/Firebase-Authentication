@@ -1,0 +1,26 @@
+<div class="flex flex-column align-items-center">
+  <button
+    pButton
+    pRipple
+    label="Sign in with Microsoft"
+    icon="pi pi-microsoft"
+    class="mt-8 auth-button"
+    (click)="microsoftAuth()"
+  ></button>
+  <button
+    pButton
+    pRipple
+    label="Sign in with Google"
+    icon="pi pi-google"
+    class="mt-5 auth-button"
+    (click)="googleAuth()"
+  ></button>
+  <button
+    pButton
+    pRipple
+    label="Sign in with email"
+    icon="pi pi-envelope"
+    class="mt-5 auth-button"
+    [routerLink]="['/login']"
+  ></button>
+</div>
